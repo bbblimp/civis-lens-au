@@ -137,6 +137,13 @@ Each live execution writes:
 - provider response payload to `*.api_response.json`
 - updated bundle metadata with request IDs, usage, and resolved model names
 
+For manual web-model runs:
+
+- paste the generated `*.prompt.md` file unchanged
+- require the model to begin with `## Section 1: JSON`
+- require one raw JSON object only in section 1, with no code fences
+- require rubric scores to be integers from `0` to `5` only
+
 ## Recommended Workflow
 
 - Use one policy directory per policy.

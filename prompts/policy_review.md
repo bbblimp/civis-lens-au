@@ -19,6 +19,14 @@ Rules:
 - For `current` mode, assess the policy based on present implementation context and current evidence.
 - For `proposed` mode, evaluate assumptions, feasibility, incentives, and forecast risks without overstating confidence.
 - If evidence is insufficient or conflicting, state that directly.
+- Return exactly two top-level sections and nothing before `## Section 1: JSON`.
+- `## Section 1: JSON` must be followed by one raw JSON object only. Do not wrap the JSON in code fences. Do not replace it with prose, lists, or headings.
+- The JSON must be valid RFC 8259 JSON: double-quoted keys and strings, no comments, no trailing commas.
+- Include every key shown below. If information is missing, use an empty string or empty array rather than omitting the key.
+- Every score must be an integer from `0` to `5` inclusive. Do not use `1-10`, percentages, decimals, or textual labels for scores.
+- Interpret `implementation_risk` on the same positive rubric direction as the other scores: `5` means low implementation risk / strong delivery robustness, `0` means extreme implementation risk / likely delivery failure.
+- `confidence_level` must be exactly one of: `low`, `medium`, `high`.
+- After the JSON object, write `## Section 2: Narrative` exactly and provide the narrative analysis there.
 
 Return two sections:
 
@@ -71,4 +79,4 @@ Write a concise narrative analysis that:
 - notes what is solid versus uncertain
 - highlights the most important evidence gaps
 - avoids party-political framing
-
+- stays under 300 words unless the policy text is unusually complex

@@ -20,13 +20,43 @@
     "disputed_findings": {
       "type": "array",
       "items": {
-        "type": "string"
+        "type": "object",
+        "required": [
+          "area",
+          "description"
+        ],
+        "properties": {
+          "area": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
       }
     },
     "likely_bias_or_weaknesses": {
       "type": "array",
       "items": {
-        "type": "string"
+        "type": "object",
+        "required": [
+          "reviewer",
+          "type",
+          "description"
+        ],
+        "properties": {
+          "reviewer": {
+            "type": "string"
+          },
+          "type": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
       }
     },
     "consolidated_assessment": {
@@ -47,5 +77,5 @@
       ]
     }
   },
-  "additionalProperties": true
+  "additionalProperties": false
 }

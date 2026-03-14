@@ -1,0 +1,196 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Civis policy review output",
+  "type": "object",
+  "required": [
+    "policy_summary",
+    "policy_objectives",
+    "mechanism_of_action",
+    "intended_beneficiaries",
+    "likely_burdened_groups",
+    "fiscal_feasibility",
+    "administrative_feasibility",
+    "legal_or_regulatory_fit",
+    "equity_and_distributional_effects",
+    "risks_and_unintended_consequences",
+    "measurability_and_accountability",
+    "strongest_argument_in_favor",
+    "strongest_argument_against",
+    "alternatives_or_design_improvements",
+    "confidence_level",
+    "evidence_gaps",
+    "hindsight_notes",
+    "claim_labels",
+    "scores"
+  ],
+  "properties": {
+    "policy_summary": {
+      "type": "string"
+    },
+    "policy_objectives": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "mechanism_of_action": {
+      "type": "string"
+    },
+    "intended_beneficiaries": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "likely_burdened_groups": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "fiscal_feasibility": {
+      "type": "string"
+    },
+    "administrative_feasibility": {
+      "type": "string"
+    },
+    "legal_or_regulatory_fit": {
+      "type": "string"
+    },
+    "equity_and_distributional_effects": {
+      "type": "string"
+    },
+    "risks_and_unintended_consequences": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "measurability_and_accountability": {
+      "type": "string"
+    },
+    "strongest_argument_in_favor": {
+      "type": "string"
+    },
+    "strongest_argument_against": {
+      "type": "string"
+    },
+    "alternatives_or_design_improvements": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "confidence_level": {
+      "type": "string",
+      "enum": [
+        "low",
+        "medium",
+        "high"
+      ]
+    },
+    "evidence_gaps": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "hindsight_notes": {
+      "type": "string"
+    },
+    "claim_labels": {
+      "type": "object",
+      "required": [
+        "facts",
+        "inferences",
+        "forecasts",
+        "value_judgments",
+        "uncertainties"
+      ],
+      "properties": {
+        "facts": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "inferences": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "forecasts": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "value_judgments": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "uncertainties": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "scores": {
+      "type": "object",
+      "required": [
+        "clarity",
+        "feasibility",
+        "evidence_support",
+        "equity_impact",
+        "implementation_risk",
+        "accountability",
+        "long_term_resilience"
+      ],
+      "properties": {
+        "clarity": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 5
+        },
+        "feasibility": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 5
+        },
+        "evidence_support": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 5
+        },
+        "equity_impact": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 5
+        },
+        "implementation_risk": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 5
+        },
+        "accountability": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 5
+        },
+        "long_term_resilience": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 5
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}

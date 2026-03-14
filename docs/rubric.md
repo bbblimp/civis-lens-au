@@ -35,6 +35,10 @@ How well does the policy account for distributional effects across groups and re
 
 What is the likelihood of delivery failure, gaming, leakage, or harmful side effects?
 
+Score direction:
+- `5` means low implementation risk / strong delivery robustness
+- `0` means extreme implementation risk / likely delivery failure
+
 ### Accountability
 
 Are there clear measures, oversight mechanisms, and feedback loops?
@@ -53,4 +57,3 @@ Every review should also state:
 - evidence gaps
 - confidence level
 - alternatives or design improvements
-
