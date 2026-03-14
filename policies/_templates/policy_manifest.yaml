@@ -1,0 +1,23 @@
+policy_id: sample-policy-id
+title: "Sample Policy Title"
+status: draft
+evaluation_mode: proposed
+jurisdiction: federal
+as_of_date: 2026-03-14
+original_decision_date: null
+policy_owner: null
+summary: >
+  Replace this with a neutral summary of the policy under review.
+policy_text_file: policy.md
+attachments: []
+sources:
+  - id: source-1
+    title: Example source
+    type: primary
+    date: 2026-03-14
+    url: https://example.com/source
+tags:
+  - example
+notes:
+  - Keep hindsight separate from contemporaneous analysis for historical reviews.
+

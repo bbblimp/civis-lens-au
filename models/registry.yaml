@@ -1,0 +1,40 @@
+version: 1
+
+review_models:
+  - alias: openai_review
+    provider: openai
+    model: set-me
+    role: review
+    enabled: true
+    parameters:
+      temperature: 0.1
+      max_output_tokens: 4000
+
+  - alias: anthropic_review
+    provider: anthropic
+    model: set-me
+    role: review
+    enabled: true
+    parameters:
+      temperature: 0.1
+      max_output_tokens: 4000
+
+  - alias: google_review
+    provider: google
+    model: set-me
+    role: review
+    enabled: true
+    parameters:
+      temperature: 0.1
+      max_output_tokens: 4000
+
+synthesis_models:
+  - alias: synthesis_primary
+    provider: set-me
+    model: set-me
+    role: synthesis
+    enabled: true
+    parameters:
+      temperature: 0.1
+      max_output_tokens: 5000
+

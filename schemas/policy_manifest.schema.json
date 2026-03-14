@@ -1,0 +1,151 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Civis policy manifest",
+  "type": "object",
+  "required": [
+    "policy_id",
+    "title",
+    "status",
+    "evaluation_mode",
+    "jurisdiction",
+    "as_of_date",
+    "summary",
+    "policy_text_file",
+    "attachments",
+    "sources",
+    "tags",
+    "notes"
+  ],
+  "properties": {
+    "policy_id": {
+      "type": "string",
+      "pattern": "^[a-z0-9-]+$"
+    },
+    "title": {
+      "type": "string",
+      "minLength": 1
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "draft",
+        "historical",
+        "active",
+        "proposed",
+        "archived"
+      ]
+    },
+    "evaluation_mode": {
+      "type": "string",
+      "enum": [
+        "historical",
+        "current",
+        "proposed"
+      ]
+    },
+    "jurisdiction": {
+      "type": "string",
+      "enum": [
+        "federal",
+        "state",
+        "local"
+      ]
+    },
+    "as_of_date": {
+      "type": "string",
+      "format": "date"
+    },
+    "original_decision_date": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date"
+    },
+    "policy_owner": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "summary": {
+      "type": "string"
+    },
+    "policy_text_file": {
+      "type": "string"
+    },
+    "attachments": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "file",
+          "description"
+        ],
+        "properties": {
+          "file": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "sources": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "title",
+          "type",
+          "date"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "title": {
+            "type": "string"
+          },
+          "type": {
+            "type": "string",
+            "enum": [
+              "primary",
+              "official",
+              "academic",
+              "analysis",
+              "media",
+              "other"
+            ]
+          },
+          "date": {
+            "type": "string",
+            "format": "date"
+          },
+          "url": {
+            "type": "string",
+            "format": "uri"
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "tags": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "notes": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "additionalProperties": false
+}
+

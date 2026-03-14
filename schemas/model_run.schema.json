@@ -1,0 +1,129 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Civis model run",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "run_id",
+    "run_group_id",
+    "stage",
+    "created_at_utc",
+    "policy_id",
+    "prompt",
+    "model",
+    "raw_response"
+  ],
+  "properties": {
+    "schema_version": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "run_id": {
+      "type": "string"
+    },
+    "run_group_id": {
+      "type": "string"
+    },
+    "stage": {
+      "type": "string",
+      "enum": [
+        "review",
+        "synthesis"
+      ]
+    },
+    "created_at_utc": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "policy_id": {
+      "type": "string"
+    },
+    "policy_path": {
+      "type": "string"
+    },
+    "prompt": {
+      "type": "object",
+      "required": [
+        "template_path",
+        "template_sha256",
+        "prepared_prompt_path",
+        "prepared_prompt_sha256"
+      ],
+      "properties": {
+        "template_path": {
+          "type": "string"
+        },
+        "template_sha256": {
+          "type": "string"
+        },
+        "prepared_prompt_path": {
+          "type": "string"
+        },
+        "prepared_prompt_sha256": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": true
+    },
+    "model": {
+      "type": "object",
+      "required": [
+        "alias",
+        "provider",
+        "model",
+        "role"
+      ],
+      "properties": {
+        "alias": {
+          "type": "string"
+        },
+        "provider": {
+          "type": "string"
+        },
+        "model": {
+          "type": "string"
+        },
+        "role": {
+          "type": "string"
+        },
+        "parameters": {
+          "type": "object"
+        }
+      },
+      "additionalProperties": true
+    },
+    "source_run_files": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "raw_response": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "response_source_path": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "response_sha256": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "response_recorded_at_utc": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time"
+    }
+  },
+  "additionalProperties": true
+}
+

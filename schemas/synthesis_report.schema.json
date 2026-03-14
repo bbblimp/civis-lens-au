@@ -1,0 +1,51 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Civis synthesis report",
+  "type": "object",
+  "required": [
+    "consensus_findings",
+    "disputed_findings",
+    "likely_bias_or_weaknesses",
+    "consolidated_assessment",
+    "required_human_follow_up",
+    "confidence_rating"
+  ],
+  "properties": {
+    "consensus_findings": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "disputed_findings": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "likely_bias_or_weaknesses": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "consolidated_assessment": {
+      "type": "string"
+    },
+    "required_human_follow_up": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "confidence_rating": {
+      "type": "string",
+      "enum": [
+        "low",
+        "medium",
+        "high"
+      ]
+    }
+  },
+  "additionalProperties": true
+}
