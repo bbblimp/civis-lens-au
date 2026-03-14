@@ -1,0 +1,42 @@
+policy_id: f2023l00298-christmas-island-section-11-exemption
+title: "2023 Section 11 exemption for voyages between Christmas Island and Australian states and territories"
+status: historical
+evaluation_mode: historical
+jurisdiction: federal
+as_of_date: 2023-03-21
+original_decision_date: 2023-03-06
+policy_owner: Minister for Infrastructure, Transport, Regional Development and Local Government
+summary: >
+  A legislative instrument made under section 11 of the Coastal Trading
+  (Revitalising Australian Shipping) Act 2012 that exempts a class of voyages
+  between Christmas Island and Australian states or territories from the Act's
+  coastal trading requirements, while excluding broader mainland-to-mainland
+  carriage.
+policy_text_file: policy.md
+attachments: []
+sources:
+  - id: primary-instrument
+    title: 2023 Section 11 exemption for voyages between Christmas Island and Australian states and territories
+    type: primary
+    date: 2023-03-21
+    url: https://www.legislation.gov.au/F2023L00298/asmade/text
+  - id: explanatory-statement
+    title: Explanatory statement for the 2023 Section 11 exemption for voyages between Christmas Island and Australian states and territories
+    type: official
+    date: 2023-03-21
+    url: https://www.legislation.gov.au/F2023L00298/asmade/text/explanatory-statement
+  - id: enabling-act
+    title: Coastal Trading (Revitalising Australian Shipping) Act 2012
+    type: primary
+    date: 2012-06-29
+    url: https://www.legislation.gov.au/C2012A00055/latest/text
+tags:
+  - shipping
+  - christmas-island
+  - coastal-trading
+  - exemption
+  - legislative-instrument
+notes:
+  - Anchor historical evaluation to the registration date of 2023-03-21.
+  - Treat the commencement and effective-period wording separately from later implementation outcomes.
+  - Keep any later evidence about service impacts or market effects in hindsight analysis only.

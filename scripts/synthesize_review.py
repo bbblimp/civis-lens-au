@@ -22,6 +22,7 @@ from common import (
     utc_now,
     write_text,
 )
+from providers import ProviderError, execute_prompt
 
 
 def parse_args() -> argparse.Namespace:
@@ -58,6 +59,30 @@ def parse_args() -> argparse.Namespace:
         help="Overwrite an existing recorded synthesis response.",
     )
 
+    execute = subparsers.add_parser(
+        "execute", help="Execute one or more prepared synthesis bundles against live APIs."
+    )
+    execute_target = execute.add_mutually_exclusive_group(required=True)
+    execute_target.add_argument(
+        "--bundle",
+        help="Path to a single synthesis bundle JSON file.",
+    )
+    execute_target.add_argument(
+        "--run-dir",
+        help="Run group directory containing synthesis bundles.",
+    )
+    execute.add_argument(
+        "--model",
+        action="append",
+        default=[],
+        help="Limit run-dir execution to one or more synthesis model aliases.",
+    )
+    execute.add_argument(
+        "--force",
+        action="store_true",
+        help="Overwrite an existing recorded synthesis response.",
+    )
+
     return parser.parse_args()
 
 
@@ -77,6 +102,31 @@ def select_synthesis_models(
     if missing:
         raise SystemExit(f"Unknown synthesis model aliases: {', '.join(missing)}")
     return [index[alias] for alias in aliases]
+
+
+def hydrate_synthesis_model_config(bundle_model: dict[str, Any]) -> dict[str, Any]:
+    alias = str(bundle_model.get("alias", "")).strip()
+    if not alias:
+        return bundle_model
+
+    registry = load_yaml_file(repo_root() / "models" / "registry.yaml")
+    selected = select_synthesis_models(registry, [alias])[0]
+    merged = dict(selected)
+    merged.update(bundle_model)
+
+    selected_parameters = selected.get("parameters", {})
+    bundle_parameters = bundle_model.get("parameters", {})
+    if isinstance(selected_parameters, dict):
+        merged["parameters"] = dict(selected_parameters)
+        if isinstance(bundle_parameters, dict):
+            merged["parameters"].update(bundle_parameters)
+
+    for key in ("provider", "model", "role"):
+        bundle_value = str(bundle_model.get(key, "")).strip()
+        if not bundle_value or bundle_value == "set-me":
+            merged[key] = selected.get(key)
+
+    return merged
 
 
 def load_completed_reviews(run_dir: Path) -> list[tuple[Path, dict[str, Any]]]:
@@ -258,12 +308,118 @@ def record(args: argparse.Namespace) -> int:
     return 0
 
 
+def resolve_execution_targets(
+    bundle_path_text: str | None, run_dir_text: str | None, aliases: list[str]
+) -> list[Path]:
+    if bundle_path_text:
+        return [resolve_repo_path(bundle_path_text)]
+    if not run_dir_text:
+        raise SystemExit("Either --bundle or --run-dir is required.")
+
+    run_dir = resolve_repo_path(run_dir_text)
+    if not run_dir.exists():
+        raise SystemExit(f"Run directory not found: {run_dir}")
+
+    bundle_paths = sorted(run_dir.glob("synthesis__*.json"))
+    if aliases:
+        wanted = {f"synthesis__{alias}.json" for alias in aliases}
+        bundle_paths = [path for path in bundle_paths if path.name in wanted]
+    if not bundle_paths:
+        raise SystemExit(f"No matching synthesis bundles found in {run_dir}")
+    return bundle_paths
+
+
+def execute_bundle(bundle_path: Path, force: bool) -> None:
+    if not bundle_path.exists():
+        raise SystemExit(f"Bundle not found: {bundle_path}")
+
+    bundle = load_json_file(bundle_path)
+    if bundle.get("stage") != "synthesis":
+        raise SystemExit(f"Bundle is not a synthesis run: {bundle_path}")
+    if bundle.get("raw_response") and not force:
+        raise SystemExit(
+            f"Bundle already has a recorded response: {path_for_log(bundle_path)}. Use --force to overwrite it."
+        )
+
+    prompt_info = bundle.get("prompt", {})
+    if not isinstance(prompt_info, dict):
+        raise SystemExit(f"Bundle prompt metadata is invalid: {bundle_path}")
+    prepared_prompt_path = resolve_repo_path(str(prompt_info.get("prepared_prompt_path", "")))
+    if not prepared_prompt_path.exists():
+        raise SystemExit(f"Prepared prompt not found: {prepared_prompt_path}")
+
+    prompt_text = read_text(prepared_prompt_path)
+    if not prompt_text.strip():
+        raise SystemExit(f"Prepared prompt is empty: {prepared_prompt_path}")
+
+    model_config = bundle.get("model", {})
+    if not isinstance(model_config, dict):
+        raise SystemExit(f"Bundle model metadata is invalid: {bundle_path}")
+    model_config = hydrate_synthesis_model_config(model_config)
+    bundle["model"] = model_config
+
+    try:
+        result = execute_prompt(model_config, prompt_text)
+    except ProviderError as exc:
+        raise SystemExit(str(exc)) from exc
+
+    request_path = bundle_path.with_suffix(".api_request.json")
+    provider_response_path = bundle_path.with_suffix(".api_response.json")
+    text_response_path = bundle_path.with_suffix(".response.txt")
+
+    dump_json_file(request_path, json_ready(result.request_payload))
+    dump_json_file(provider_response_path, json_ready(result.response_payload))
+    write_text(text_response_path, result.output_text)
+
+    bundle["model"]["configured_model"] = result.configured_model
+    bundle["model"]["model"] = result.resolved_model
+    bundle["raw_response"] = result.output_text
+    bundle["response_source_path"] = path_for_log(text_response_path)
+    bundle["response_sha256"] = sha256_text(result.output_text)
+    bundle["response_recorded_at_utc"] = utc_iso(utc_now())
+
+    output_dir = repo_root() / "outputs" / str(bundle["policy_id"]) / str(bundle["run_group_id"])
+    report_path = output_dir / f"{bundle['model']['alias']}.md"
+    write_text(report_path, render_report(bundle))
+    bundle["report_path"] = path_for_log(report_path)
+    bundle["execution"] = {
+        "method": "live_api",
+        "provider": result.provider,
+        "endpoint": result.endpoint,
+        "request_id": result.request_id,
+        "request_path": path_for_log(request_path),
+        "request_sha256": sha256_file(request_path),
+        "provider_response_path": path_for_log(provider_response_path),
+        "provider_response_sha256": sha256_file(provider_response_path),
+        "usage": result.usage,
+    }
+
+    dump_json_file(bundle_path, bundle)
+    print(f"Executed {path_for_log(bundle_path)}")
+    print(f"Wrote report to {path_for_log(report_path)}")
+
+
+def execute(args: argparse.Namespace) -> int:
+    bundle_paths = resolve_execution_targets(args.bundle, args.run_dir, args.model)
+    errors: list[str] = []
+    for bundle_path in bundle_paths:
+        try:
+            execute_bundle(bundle_path, force=args.force)
+        except SystemExit as exc:
+            errors.append(f"{path_for_log(bundle_path)}: {exc}")
+    if errors:
+        raise SystemExit("\n".join(errors))
+    return 0
+
+
 def main() -> int:
     args = parse_args()
     if args.command == "prepare":
         return prepare(args)
     if args.command == "record":
         return record(args)
+    if args.command == "execute":
+        return execute(args)
     raise SystemExit(f"Unsupported command: {args.command}")
 
 

@@ -122,8 +122,46 @@
         "null"
       ],
       "format": "date-time"
+    },
+    "execution": {
+      "type": "object",
+      "properties": {
+        "method": {
+          "type": "string"
+        },
+        "provider": {
+          "type": "string"
+        },
+        "endpoint": {
+          "type": "string"
+        },
+        "request_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "request_path": {
+          "type": "string"
+        },
+        "request_sha256": {
+          "type": "string"
+        },
+        "provider_response_path": {
+          "type": "string"
+        },
+        "provider_response_sha256": {
+          "type": "string"
+        },
+        "usage": {
+          "type": [
+            "object",
+            "null"
+          ]
+        }
+      },
+      "additionalProperties": true
     }
   },
   "additionalProperties": true
 }
-

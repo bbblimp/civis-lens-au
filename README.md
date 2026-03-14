@@ -91,6 +91,52 @@ python3 scripts/synthesize_review.py record \
 
 The synthesis recorder writes a Markdown report into `outputs/`.
 
+## Live Provider Execution
+
+The repository can now execute prepared bundles directly against OpenAI, Anthropic, and Google Gemini APIs.
+
+Required environment variables:
+
+```bash
+export OPENAI_API_KEY=...
+export ANTHROPIC_API_KEY=...
+export GEMINI_API_KEY=...
+```
+
+You can also place those values in `.env` or `.env.local` at the repository root. Those files are ignored by git and loaded automatically during live execution.
+
+Optional model overrides:
+
+```bash
+export OPENAI_MODEL=gpt-4.1-mini
+export ANTHROPIC_MODEL=claude-sonnet-4-20250514
+export GEMINI_MODEL=gemini-2.5-flash
+```
+
+Run all prepared review bundles in a run group:
+
+```bash
+python3 scripts/run_review.py execute \
+  --run-dir runs/example-policy/<run-group>
+```
+
+Prepare and execute synthesis after the three review bundles have responses:
+
+```bash
+python3 scripts/synthesize_review.py prepare \
+  --run-dir runs/example-policy/<run-group>
+
+python3 scripts/synthesize_review.py execute \
+  --run-dir runs/example-policy/<run-group>
+```
+
+Each live execution writes:
+
+- extracted model text to `*.response.txt`
+- provider request payload to `*.api_request.json`
+- provider response payload to `*.api_response.json`
+- updated bundle metadata with request IDs, usage, and resolved model names
+
 ## Recommended Workflow
 
 - Use one policy directory per policy.
@@ -102,4 +148,3 @@ The synthesis recorder writes a Markdown report into `outputs/`.
 ## Initial Status
 
 This repository is intentionally a bootstrap. It sets the project method, structure, and logging discipline first. Provider-specific integrations can be added later without changing the core audit model.
-
