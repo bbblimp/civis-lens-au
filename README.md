@@ -6,6 +6,12 @@ Civis Lens AU is a greenfield scaffold for AI-assisted review of Australian gove
 
 Test whether AI can improve policy analysis by making reasoning more consistent, auditable, date-aware, and open to critique.
 
+## Why This Matters
+
+This project has value if it is treated as open policy-review infrastructure rather than an oracle. The workflow forces fixed prompts, date-anchored reasoning, preserved raw outputs, and explicit disagreement across models. That does not make the result neutral or final, but it does make it more inspectable and easier to challenge than opaque policy commentary.
+
+The strongest use case is not "AI should govern." The strongest use case is "policy analysis should be reproducible, challengeable, and harder to manipulate quietly."
+
 ## What This Repository Is
 
 - A methodology-first repository for reviewing historical, current, and proposed policies.
@@ -17,6 +23,7 @@ Test whether AI can improve policy analysis by making reasoning more consistent,
 - A claim that any model is automatically neutral or incorruptible.
 - A replacement for democratic legitimacy, human accountability, or public scrutiny.
 - A hidden-policy generator. The method is meant to stay inspectable.
+- A proof that AI should replace government, public servants, ministers, or parliamentary process.
 
 ## Core Principles
 
@@ -25,6 +32,16 @@ Test whether AI can improve policy analysis by making reasoning more consistent,
 3. Evidence hierarchy matters: primary and official sources outrank commentary.
 4. Disagreement is useful: the synthesis stage must preserve disputes and uncertainty, not flatten them away.
 5. Human oversight stays in the loop: the project supports policy audit and drafting review, not automated government.
+
+## Public Positioning
+
+If this project is presented as "AI-driven meritocracy" or "uncorruptable machine government," it will be easy to dismiss. A more defensible public position is:
+
+- open policy review infrastructure
+- multi-model civic audit
+- reproducible policy critique with a full evidence trail
+
+That framing matches what the repository can actually demonstrate today.
 
 ## Repository Layout
 
@@ -151,6 +168,18 @@ For manual web-model runs:
 - Track source URLs and source dates in the manifest.
 - Treat the first version of a run bundle as the audit artifact for that prompt/model combination.
 - Add a red-team or adversarial review step later if you want stronger bias checks.
+
+## Traction Strategy
+
+Public traction is plausible, but trust has to be earned through evidence. The current best path is to start with serious niche users who already care about auditability:
+
+- journalists
+- civic-tech groups
+- policy students and researchers
+- advocacy organizations
+- parliamentary or ministerial staff willing to test the workflow privately
+
+The current project roadmap for that work is in [TODO.md](TODO.md).
 
 ## Initial Status
 
