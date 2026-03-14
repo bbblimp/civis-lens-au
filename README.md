@@ -43,6 +43,16 @@ If this project is presented as "AI-driven meritocracy" or "uncorruptable machin
 
 That framing matches what the repository can actually demonstrate today.
 
+## Covered Policies
+
+This section is auto-generated when a synthesis report is recorded, so visitors can see which policies have been processed and jump directly to the underlying artifacts.
+
+<!-- COVERED_POLICIES_START -->
+| Policy | Mode | As-of | Policy | Synthesis | Processing |
+| --- | --- | --- | --- | --- | --- |
+| 2023 Section 11 exemption for voyages between Christmas Island and Australian states and territories | historical | 2023-03-21 | [policy](policies/historical/f2023l00298-christmas-island-section-11-exemption/policy.md) | [report](outputs/f2023l00298-christmas-island-section-11-exemption/f2023l00298-christmas-island-section-11-exemption__20260314T023407Z/synthesis_primary.md) | [bundle](runs/f2023l00298-christmas-island-section-11-exemption/f2023l00298-christmas-island-section-11-exemption__20260314T023407Z/synthesis__synthesis_primary.json) · [prompt](runs/f2023l00298-christmas-island-section-11-exemption/f2023l00298-christmas-island-section-11-exemption__20260314T023407Z/synthesis__synthesis_primary.prompt.md) |
+<!-- COVERED_POLICIES_END -->
+
 ## Repository Layout
 
 ```text

@@ -22,6 +22,7 @@ from common import (
     utc_now,
     write_text,
 )
+from policy_index import refresh_policy_indexes
 from providers import ProviderError, execute_prompt
 
 
@@ -303,6 +304,7 @@ def record(args: argparse.Namespace) -> int:
     bundle["report_path"] = path_for_log(report_path)
 
     dump_json_file(bundle_path, bundle)
+    refresh_policy_indexes()
     print(f"Recorded synthesis in {path_for_log(bundle_path)}")
     print(f"Wrote report to {path_for_log(report_path)}")
     return 0
@@ -395,6 +397,7 @@ def execute_bundle(bundle_path: Path, force: bool) -> None:
     }
 
     dump_json_file(bundle_path, bundle)
+    refresh_policy_indexes()
     print(f"Executed {path_for_log(bundle_path)}")
     print(f"Wrote report to {path_for_log(report_path)}")
 
