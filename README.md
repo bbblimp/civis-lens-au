@@ -1,6 +1,6 @@
 # Civis Lens AU
 
-Civis Lens AU is a greenfield scaffold for AI-assisted review of Australian government policy. The project is designed to make policy analysis more transparent, reproducible, and easier to challenge by running the same policy through multiple models under the same method.
+Civis Lens AU is a repository for AI-assisted review of Australian government policy. The project is designed to make policy analysis more transparent, reproducible, and easier to challenge by running the same policy through multiple models under the same method.
 
 ## Mission
 
@@ -52,6 +52,18 @@ This section is auto-generated when a synthesis report is recorded, so visitors 
 | --- | --- | --- | --- | --- | --- |
 | 2023 Section 11 exemption for voyages between Christmas Island and Australian states and territories | historical | 2023-03-21 | [policy](policies/historical/f2023l00298-christmas-island-section-11-exemption/policy.md) | [report](outputs/f2023l00298-christmas-island-section-11-exemption/f2023l00298-christmas-island-section-11-exemption__20260314T023407Z/synthesis_primary.md) | [bundle](runs/f2023l00298-christmas-island-section-11-exemption/f2023l00298-christmas-island-section-11-exemption__20260314T023407Z/synthesis__synthesis_primary.json) · [prompt](runs/f2023l00298-christmas-island-section-11-exemption/f2023l00298-christmas-island-section-11-exemption__20260314T023407Z/synthesis__synthesis_primary.prompt.md) |
 <!-- COVERED_POLICIES_END -->
+
+## Current State
+
+The repository already demonstrates a full review workflow:
+
+- sourced policy intake with date-anchored metadata
+- multi-model review bundles
+- raw output preservation for each model
+- synthesis reporting across model agreement and disagreement
+- a hybrid execution path that supports both direct API runs and manual web-model capture
+
+The current completed case study shows the workflow operating end to end on a real Australian legislative instrument. The next stage is to expand the case-study set, strengthen validation, and improve public presentation.
 
 ## Repository Layout
 
@@ -190,7 +202,3 @@ Public traction is plausible, but trust has to be earned through evidence. The c
 - parliamentary or ministerial staff willing to test the workflow privately
 
 The current project roadmap for that work is in [TODO.md](TODO.md).
-
-## Initial Status
-
-This repository is intentionally a bootstrap. It sets the project method, structure, and logging discipline first. Provider-specific integrations can be added later without changing the core audit model.
