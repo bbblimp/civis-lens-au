@@ -1,19 +1,40 @@
-# Civis Lens AU daily agenda queue.
-#
-# Add one item per civic agenda or policy topic you want the daily automation to
-# prepare. The daily script picks the first item with status: queued.
-
 items:
-  - agenda_id: example-federal-policy-review
-    status: queued
-    title: Example federal policy review
-    evaluation_mode: current
-    jurisdiction: federal
-    as_of_date: 2026-05-20
-    summary: >
-      Replace this example with a real civic agenda item before enabling cron.
-    source_urls: []
-    tags:
-      - example
-    notes:
-      - This placeholder exists to document the queue format.
+- agenda_id: drone-security-consultation-2026
+  status: prepared
+  title: Drone Security Public Consultation Paper 2026 - aerial drone security reforms
+  evaluation_mode: proposed
+  jurisdiction: federal
+  as_of_date: 2026-05-21
+  summary: 'The Department of Home Affairs is consulting on proposed Australian Government
+    reforms to address drone security risks, with an initial focus on aerial drones.
+    The consultation canvasses measures including a national policy framework for
+    drone threats, authorised counter-drone capabilities, identification and tracking
+    through electronic conspicuity, enforcement settings, operating restrictions for
+    higher-risk areas, and public and industry awareness. The consultation is open
+    until 12:00PM AEST on 25 May 2026.
+
+    '
+  source_urls:
+  - https://www.homeaffairs.gov.au/help-and-support/how-to-engage-us/consultations/consultation-on-proposed-approaches-to-australia-drone-security
+  - https://www.homeaffairs.gov.au/forms-subsite/files/drone-security-consultation-paper-2026.pdf
+  - https://www.infrastructure.gov.au/department/media/news/consultation-opens-drone-security
+  - https://minister.homeaffairs.gov.au/TonyBurke/Pages/consultation-opens-on-drone-security-reforms.aspx
+  - https://www.infrastructure.gov.au/infrastructure-transport-vehicles/aviation/aviation-white-paper
+  tags:
+  - drones
+  - national-security
+  - aviation
+  - consultation
+  - critical-infrastructure
+  notes:
+  - Focus the review on proposed aerial drone security reforms and their interaction
+    with existing aviation safety and operational frameworks.
+  - Treat privacy, noise, and land or maritime drones as adjacent issues unless they
+    directly affect the proposed initial aerial-drone framework.
+  - Primary source collection should distinguish consultation proposals from settled
+    law or government decisions.
+  policy_id: drone-security-public-consultation-paper-2026-aerial-drone-security-reforms
+  policy_dir: policies/proposed/drone-security-public-consultation-paper-2026-aerial-drone-security-reforms
+  run_dir: runs/drone-security-public-consultation-paper-2026-aerial-drone-security-reforms/drone-security-public-consultation-paper-2026-aerial-drone-security-reforms__20260520T170040Z
+  manual_batch_dir: manual_batches/2026-05-20__drone-security-public-consultation-paper-2026-aerial-drone-security-reforms
+  prepared_at_utc: '2026-05-20T17:00:40Z'

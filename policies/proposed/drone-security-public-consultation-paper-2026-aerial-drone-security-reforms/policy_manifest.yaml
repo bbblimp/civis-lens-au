@@ -1,0 +1,39 @@
+policy_id: drone-security-public-consultation-paper-2026-aerial-drone-security-reforms
+title: Drone Security Public Consultation Paper 2026 - aerial drone security reforms
+status: proposed
+evaluation_mode: proposed
+jurisdiction: federal
+as_of_date: 2026-05-21
+original_decision_date: null
+policy_owner: null
+summary: 'The Department of Home Affairs is consulting on proposed Australian Government
+  reforms to address drone security risks, with an initial focus on aerial drones.
+  The consultation canvasses measures including a national policy framework for drone
+  threats, authorised counter-drone capabilities, identification and tracking through
+  electronic conspicuity, enforcement settings, operating restrictions for higher-risk
+  areas, and public and industry awareness. The consultation is open until 12:00PM
+  AEST on 25 May 2026.
+
+  '
+policy_text_file: policy.md
+attachments: []
+sources:
+- url: https://www.homeaffairs.gov.au/help-and-support/how-to-engage-us/consultations/consultation-on-proposed-approaches-to-australia-drone-security
+  note: Queued agenda source
+- url: https://www.homeaffairs.gov.au/forms-subsite/files/drone-security-consultation-paper-2026.pdf
+  note: Queued agenda source
+- url: https://www.infrastructure.gov.au/department/media/news/consultation-opens-drone-security
+  note: Queued agenda source
+- url: https://minister.homeaffairs.gov.au/TonyBurke/Pages/consultation-opens-on-drone-security-reforms.aspx
+  note: Queued agenda source
+- url: https://www.infrastructure.gov.au/infrastructure-transport-vehicles/aviation/aviation-white-paper
+  note: Queued agenda source
+tags:
+- drones
+- national-security
+- aviation
+- consultation
+- critical-infrastructure
+notes:
+- Record the exact policy text and source links before submitting to models.
+- Keep hindsight separate from contemporaneous analysis for historical reviews.
