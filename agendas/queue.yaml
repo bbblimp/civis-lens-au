@@ -1,0 +1,19 @@
+# Civis Lens AU daily agenda queue.
+#
+# Add one item per civic agenda or policy topic you want the daily automation to
+# prepare. The daily script picks the first item with status: queued.
+
+items:
+  - agenda_id: example-federal-policy-review
+    status: queued
+    title: Example federal policy review
+    evaluation_mode: current
+    jurisdiction: federal
+    as_of_date: 2026-05-20
+    summary: >
+      Replace this example with a real civic agenda item before enabling cron.
+    source_urls: []
+    tags:
+      - example
+    notes:
+      - This placeholder exists to document the queue format.

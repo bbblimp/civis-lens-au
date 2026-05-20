@@ -36,6 +36,7 @@ The project is more likely to earn public traction as a transparent policy-audit
 
 ### Operational Readiness
 
+- [x] Add daily agenda queue and cron/manual-batch scaffold for no-API-key operation.
 - [ ] Add automated schema validation for review outputs and synthesis outputs.
 - [ ] Improve manual web-model instructions so ChatGPT and Claude follow the JSON contract more reliably.
 - [ ] Standardize a process for rotating demo API keys and excluding secrets from all committed artifacts.

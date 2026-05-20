@@ -62,6 +62,7 @@ The repository already demonstrates a full review workflow:
 - raw output preservation for each model
 - synthesis reporting across model agreement and disagreement
 - a hybrid execution path that supports both direct API runs and manual web-model capture
+- daily agenda preparation for no-API-key operation, with queued topics, Codex-assisted source collection, manual response batches, and git-tracked progress
 
 The current completed case study shows the workflow operating end to end on a real Australian legislative instrument. The next stage is to expand the case-study set, strengthen validation, and improve public presentation.
 
@@ -76,6 +77,8 @@ prompts/     Versioned prompt templates.
 runs/        Immutable run bundles and raw model outputs.
 schemas/     JSON schemas for manifests and run artifacts.
 scripts/     Small Python tools for ingesting policies and logging runs.
+agendas/     Daily queue of civic agenda items to prepare.
+manual_batches/ Human-facing paste/record folders for web-model runs.
 ```
 
 ## Quick Start
@@ -190,6 +193,7 @@ For manual web-model runs:
 - Track source URLs and source dates in the manifest.
 - Treat the first version of a run bundle as the audit artifact for that prompt/model combination.
 - Add a red-team or adversarial review step later if you want stronger bias checks.
+- For daily automation and no-API-key operation, use the queue and batch workflow in [docs/operations.md](docs/operations.md).
 
 ## Traction Strategy
 
