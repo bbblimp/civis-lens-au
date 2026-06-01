@@ -57,3 +57,6 @@ preparation_notes:
 - date: '2026-06-01'
   status: skipped
   note: "No status: queued agenda item was available, so the unattended daily preparation job did not prepare a new policy workspace."
+- date: '2026-06-02'
+  status: skipped
+  note: "No status: queued agenda item was available, so the unattended daily preparation job did not prepare a new policy workspace."
