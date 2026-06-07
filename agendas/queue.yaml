@@ -38,40 +38,93 @@ items:
   run_dir: runs/drone-security-public-consultation-paper-2026-aerial-drone-security-reforms/drone-security-public-consultation-paper-2026-aerial-drone-security-reforms__20260520T170040Z
   manual_batch_dir: manual_batches/2026-05-20__drone-security-public-consultation-paper-2026-aerial-drone-security-reforms
   prepared_at_utc: '2026-05-20T17:00:40Z'
+- agenda_id: domestic-gas-reservation-scheme-draft-design-framework-2026
+  status: prepared
+  title: Domestic Gas Reservation Scheme draft Design Framework
+  evaluation_mode: proposed
+  jurisdiction: federal
+  as_of_date: 2026-06-08
+  summary: 'The Australian Government is consulting on a draft Design Framework for
+    a Domestic Gas Reservation Scheme. The proposal would require LNG exporters to
+    supply gas to the Australian domestic market equivalent to 20 per cent of their
+    LNG exports each year, described as a domestic supply obligation, with obligations
+    intended to commence from 1 July 2027. The framework also canvasses regulatory
+    architecture, export approvals, compliance and enforcement arrangements, flexibility
+    mechanisms, and related gas market transparency and conduct reforms. Submissions
+    are invited until 11:30pm AEST on 30 June 2026.
+
+    '
+  source_urls:
+  - https://consult.dcceew.gov.au/domestic-gas-reservation-scheme-draft-design-framework
+  - https://www.dcceew.gov.au/about/news/have-your-say-domestic-gas-reservation-scheme
+  - https://storage.googleapis.com/files-au-climate/climate-au/p/prj3ce30473c51fb474d08e6/page/Domestic_Gas_Reservation_scheme_draft_Design_Framework_May2026.pdf
+  - https://storage.googleapis.com/files-au-climate/climate-au/p/prj3ce30473c51fb474d08e6/page/Domestic_Gas_Reservation_draft_Design_Framework_Attachment_A_Export_Process_and_Flexibility_Mechanisms.pdf
+  - https://storage.googleapis.com/files-au-climate/climate-au/p/prj3ce30473c51fb474d08e6/page/DGR_Draft_Design_Framework_Att_B_Increased_Transparency_Measures.pdf
+  tags:
+  - energy
+  - gas
+  - lng
+  - consultation
+  - market-regulation
+  notes:
+  - Focus the review on the proposed national domestic gas reservation design, including
+    the domestic supply obligation, export approval model, compliance settings, and
+    market-transparency reforms.
+  - Treat the draft Design Framework as indicative consultation material, not settled
+    legislation or final policy settings.
+  - Separate claims about domestic supply, affordability, industry competitiveness,
+    export-contract treatment, and regulatory burden.
+  policy_id: domestic-gas-reservation-scheme-draft-design-framework
+  policy_dir: policies/proposed/domestic-gas-reservation-scheme-draft-design-framework
+  run_dir: runs/domestic-gas-reservation-scheme-draft-design-framework/domestic-gas-reservation-scheme-draft-design-framework__20260607T170055Z
+  manual_batch_dir: manual_batches/2026-06-07__domestic-gas-reservation-scheme-draft-design-framework
+  prepared_at_utc: '2026-06-07T17:00:55Z'
 preparation_notes:
 - date: '2026-05-22'
   status: skipped
-  note: "No status: queued agenda item was available, so the unattended daily preparation job did not prepare a new policy workspace."
+  note: 'No status: queued agenda item was available, so the unattended daily preparation
+    job did not prepare a new policy workspace.'
 - date: '2026-05-25'
   status: skipped
-  note: "No status: queued agenda item was available, so the unattended daily preparation job did not prepare a new policy workspace."
+  note: 'No status: queued agenda item was available, so the unattended daily preparation
+    job did not prepare a new policy workspace.'
 - date: '2026-05-26'
   status: skipped
-  note: "No status: queued agenda item was available, so the unattended daily preparation job did not prepare a new policy workspace."
+  note: 'No status: queued agenda item was available, so the unattended daily preparation
+    job did not prepare a new policy workspace.'
 - date: '2026-05-27'
   status: skipped
-  note: "No status: queued agenda item was available, so the unattended daily preparation job did not prepare a new policy workspace."
+  note: 'No status: queued agenda item was available, so the unattended daily preparation
+    job did not prepare a new policy workspace.'
 - date: '2026-05-28'
   status: skipped
-  note: "No status: queued agenda item was available, so the unattended daily preparation job did not prepare a new policy workspace."
+  note: 'No status: queued agenda item was available, so the unattended daily preparation
+    job did not prepare a new policy workspace.'
 - date: '2026-06-01'
   status: skipped
-  note: "No status: queued agenda item was available, so the unattended daily preparation job did not prepare a new policy workspace."
+  note: 'No status: queued agenda item was available, so the unattended daily preparation
+    job did not prepare a new policy workspace.'
 - date: '2026-06-02'
   status: skipped
-  note: "No status: queued agenda item was available, so the unattended daily preparation job did not prepare a new policy workspace."
+  note: 'No status: queued agenda item was available, so the unattended daily preparation
+    job did not prepare a new policy workspace.'
 - date: '2026-06-03'
   status: skipped
-  note: "No status: queued agenda item was available, so the unattended daily preparation job did not prepare a new policy workspace."
+  note: 'No status: queued agenda item was available, so the unattended daily preparation
+    job did not prepare a new policy workspace.'
 - date: '2026-06-04'
   status: skipped
-  note: "No status: queued agenda item was available, so the unattended daily preparation job did not prepare a new policy workspace."
+  note: 'No status: queued agenda item was available, so the unattended daily preparation
+    job did not prepare a new policy workspace.'
 - date: '2026-06-05'
   status: skipped
-  note: "No status: queued agenda item was available, so the unattended daily preparation job did not prepare a new policy workspace."
+  note: 'No status: queued agenda item was available, so the unattended daily preparation
+    job did not prepare a new policy workspace.'
 - date: '2026-06-06'
   status: skipped
-  note: "No status: queued agenda item was available, so the unattended daily preparation job did not prepare a new policy workspace."
+  note: 'No status: queued agenda item was available, so the unattended daily preparation
+    job did not prepare a new policy workspace.'
 - date: '2026-06-07'
   status: skipped
-  note: "No status: queued agenda item was available, so the unattended daily preparation job did not prepare a new policy workspace."
+  note: 'No status: queued agenda item was available, so the unattended daily preparation
+    job did not prepare a new policy workspace.'

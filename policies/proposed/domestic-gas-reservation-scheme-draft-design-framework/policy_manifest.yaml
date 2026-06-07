@@ -1,0 +1,40 @@
+policy_id: domestic-gas-reservation-scheme-draft-design-framework
+title: Domestic Gas Reservation Scheme draft Design Framework
+status: proposed
+evaluation_mode: proposed
+jurisdiction: federal
+as_of_date: 2026-06-08
+original_decision_date: null
+policy_owner: null
+summary: 'The Australian Government is consulting on a draft Design Framework for
+  a Domestic Gas Reservation Scheme. The proposal would require LNG exporters to supply
+  gas to the Australian domestic market equivalent to 20 per cent of their LNG exports
+  each year, described as a domestic supply obligation, with obligations intended
+  to commence from 1 July 2027. The framework also canvasses regulatory architecture,
+  export approvals, compliance and enforcement arrangements, flexibility mechanisms,
+  and related gas market transparency and conduct reforms. Submissions are invited
+  until 11:30pm AEST on 30 June 2026.
+
+  '
+policy_text_file: policy.md
+attachments: []
+sources:
+- url: https://consult.dcceew.gov.au/domestic-gas-reservation-scheme-draft-design-framework
+  note: Queued agenda source
+- url: https://www.dcceew.gov.au/about/news/have-your-say-domestic-gas-reservation-scheme
+  note: Queued agenda source
+- url: https://storage.googleapis.com/files-au-climate/climate-au/p/prj3ce30473c51fb474d08e6/page/Domestic_Gas_Reservation_scheme_draft_Design_Framework_May2026.pdf
+  note: Queued agenda source
+- url: https://storage.googleapis.com/files-au-climate/climate-au/p/prj3ce30473c51fb474d08e6/page/Domestic_Gas_Reservation_draft_Design_Framework_Attachment_A_Export_Process_and_Flexibility_Mechanisms.pdf
+  note: Queued agenda source
+- url: https://storage.googleapis.com/files-au-climate/climate-au/p/prj3ce30473c51fb474d08e6/page/DGR_Draft_Design_Framework_Att_B_Increased_Transparency_Measures.pdf
+  note: Queued agenda source
+tags:
+- energy
+- gas
+- lng
+- consultation
+- market-regulation
+notes:
+- Record the exact policy text and source links before submitting to models.
+- Keep hindsight separate from contemporaneous analysis for historical reviews.
