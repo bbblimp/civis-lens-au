@@ -1,0 +1,42 @@
+policy_id: enhancing-australia-s-first-right-to-repair-laws-agricultural-machinery-and-mvis-improvements
+title: Enhancing Australia's first right to repair laws - agricultural machinery and
+  MVIS improvements
+status: proposed
+evaluation_mode: proposed
+jurisdiction: federal
+as_of_date: 2026-06-16
+original_decision_date: null
+policy_owner: null
+summary: 'Treasury is consulting on proposals to expand Australia''s Motor Vehicle
+  Service and Repair Information Sharing Scheme to certain agricultural machinery
+  and to improve the existing motor-vehicle right to repair scheme. The discussion
+  paper seeks feedback on machinery and equipment coverage, eligible access to repair
+  information, use limits for scheme information, safety and security information,
+  intermediaries, electronic logbooks, pricing, supply timeframes, governance, and
+  enforcement. The consultation opened on 22 May 2026 and closes on 3 July 2026.
+
+  '
+policy_text_file: policy.md
+attachments: []
+sources:
+- url: https://consult.treasury.gov.au/c2026-760808
+  note: Queued agenda source
+- url: https://storage.googleapis.com/files-au-treasury/treasury/p/prj3c8735784e10eec0231f0/page/c2026_760808.pdf
+  note: Queued agenda source
+- url: https://treasury.gov.au/review/review-motor-vehicle-information-sharing-scheme
+  note: Queued agenda source
+- url: https://treasury.gov.au/publication/p2026-740225
+  note: Queued agenda source
+- url: https://ministers.treasury.gov.au/ministers/andrew-leigh-2025/media-releases/right-repair-delivering-motorists-small-business-and
+  note: Queued agenda source
+- url: https://ministers.treasury.gov.au/ministers/jim-chalmers-2022/media-releases/treasurers-agree-reforms-increase-competition-and-boost
+  note: Queued agenda source
+tags:
+- right-to-repair
+- agriculture
+- competition
+- consumer-policy
+- consultation
+notes:
+- Record the exact policy text and source links before submitting to models.
+- Keep hindsight separate from contemporaneous analysis for historical reviews.
