@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "run_id": "online-safety-amendment-social-media-minimum-age-act-2024-under-16-account-restrictions__20260623T170205Z__review__openai_review",
+  "run_group_id": "online-safety-amendment-social-media-minimum-age-act-2024-under-16-account-restrictions__20260623T170205Z",
+  "stage": "review",
+  "created_at_utc": "2026-06-23T17:02:05Z",
+  "policy_id": "online-safety-amendment-social-media-minimum-age-act-2024-under-16-account-restrictions",
+  "policy_path": "policies/current/online-safety-amendment-social-media-minimum-age-act-2024-under-16-account-restrictions",
+  "policy_manifest_path": "policies/current/online-safety-amendment-social-media-minimum-age-act-2024-under-16-account-restrictions/policy_manifest.yaml",
+  "policy_manifest_sha256": "d13148364ca3414a96b24e8b88c1e9f860ba0b0a91c877766474434b7a2ed787",
+  "policy_text_path": "policies/current/online-safety-amendment-social-media-minimum-age-act-2024-under-16-account-restrictions/policy.md",
+  "policy_text_sha256": "e9fc68f536a793fef40cf94d4bede447ef9efaf3da636fc04f1bd36f08a3f9ff",
+  "prompt": {
+    "template_path": "prompts/policy_review.md",
+    "template_sha256": "6ff8a9b8fa2315ddf6aeb06040d4edfe09ad14add396bcf4649e3572cc2ed16f",
+    "prepared_prompt_path": "runs/online-safety-amendment-social-media-minimum-age-act-2024-under-16-account-restrictions/online-safety-amendment-social-media-minimum-age-act-2024-under-16-account-restrictions__20260623T170205Z/review__openai_review.prompt.md",
+    "prepared_prompt_sha256": "b1931f0b2ffdefcc0870d3b12b3945843ad2f0c3de512e8bcb252b0789942c59"
+  },
+  "model": {
+    "alias": "openai_review",
+    "provider": "openai",
+    "model": "gpt-4.1-mini",
+    "role": "review",
+    "enabled": true,
+    "parameters": {
+      "temperature": 0.1,
+      "max_output_tokens": 4000
+    }
+  },
+  "raw_response": null,
+  "response_source_path": null,
+  "response_sha256": null,
+  "response_recorded_at_utc": null
+}

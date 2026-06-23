@@ -121,6 +121,48 @@ items:
   run_dir: runs/domestic-gas-reservation-scheme-draft-design-framework/domestic-gas-reservation-scheme-draft-design-framework__20260607T170055Z
   manual_batch_dir: manual_batches/2026-06-07__domestic-gas-reservation-scheme-draft-design-framework
   prepared_at_utc: '2026-06-07T17:00:55Z'
+- agenda_id: social-media-minimum-age-implementation-2026
+  status: prepared
+  title: Online Safety Amendment (Social Media Minimum Age) Act 2024 - under-16 account
+    restrictions
+  evaluation_mode: current
+  jurisdiction: federal
+  as_of_date: 2026-06-24
+  summary: 'Australia''s Online Safety Amendment (Social Media Minimum Age) Act 2024
+    amended the Online Safety Act 2021 to require providers of age-restricted social
+    media platforms to take reasonable steps to prevent Australian users under 16
+    from having accounts. The bill was introduced in November 2024, passed both Houses
+    on 29 November 2024, and received assent on 10 December 2024. The policy review
+    should focus on the current statutory framework and implementation design for
+    under-16 account restrictions, including provider obligations, platform scope,
+    age assurance, privacy, child safety, enforcement, and proportionality.
+
+    '
+  source_urls:
+  - https://www.aph.gov.au/Parliamentary_Business/Bills_Legislation/Bills_Search_Results/Result?bId=r7284
+  - https://www.legislation.gov.au/C2024A00127/latest/text
+  - https://www.aph.gov.au/Parliamentary_Business/Committees/Senate/Environment_and_Communications/SocialMediaMinimumAge
+  - https://www.infrastructure.gov.au/department/media/publications/online-safety-amendment-social-media-minimum-age-bill-2024-fact-sheet
+  tags:
+  - online-safety
+  - social-media
+  - children
+  - privacy
+  - digital-regulation
+  notes:
+  - Focus the review on the current federal under-16 social media account restriction
+    framework and its implementation, not a general review of all online safety law.
+  - Distinguish the enacted statutory obligations from implementation guidance, platform-specific
+    determinations, age-assurance technology claims, and contested empirical claims
+    about youth mental health or online harm.
+  - Treat child safety, privacy, freedom of expression, enforcement feasibility, competition
+    effects, parental choice, and impacts on vulnerable young people as separate evaluation
+    dimensions.
+  policy_id: online-safety-amendment-social-media-minimum-age-act-2024-under-16-account-restrictions
+  policy_dir: policies/current/online-safety-amendment-social-media-minimum-age-act-2024-under-16-account-restrictions
+  run_dir: runs/online-safety-amendment-social-media-minimum-age-act-2024-under-16-account-restrictions/online-safety-amendment-social-media-minimum-age-act-2024-under-16-account-restrictions__20260623T170205Z
+  manual_batch_dir: manual_batches/2026-06-23__online-safety-amendment-social-media-minimum-age-act-2024-under-16-account-restrictions
+  prepared_at_utc: '2026-06-23T17:02:05Z'
 preparation_notes:
 - date: '2026-05-22'
   status: skipped
