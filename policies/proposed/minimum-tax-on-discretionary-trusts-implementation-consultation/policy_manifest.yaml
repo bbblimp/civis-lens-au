@@ -1,0 +1,38 @@
+policy_id: minimum-tax-on-discretionary-trusts-implementation-consultation
+title: Minimum tax on discretionary trusts - implementation consultation
+status: proposed
+evaluation_mode: proposed
+jurisdiction: federal
+as_of_date: 2026-07-24
+original_decision_date: null
+policy_owner: null
+summary: 'Treasury is consulting on implementation details for a proposed 30 per cent
+  minimum tax on discretionary trusts. The consultation paper says the measure is
+  intended to apply from 1 July 2028, with expanded rollover relief available for
+  three years from 1 July 2027 for trusts that choose to restructure. Treasury is
+  seeking feedback on the core arrangements and exclusions, treatment of distributions
+  to income-tax exempt entities, rollover relief, excess franking credits, collection
+  mechanisms, and interactions with unpaid present entitlement issues following Commissioner
+  of Taxation v Bendel. Submissions close on 31 July 2026.
+
+  '
+policy_text_file: policy.md
+attachments: []
+sources:
+- url: https://consult.treasury.gov.au/c2026-784079
+  note: Queued agenda source
+- url: https://storage.googleapis.com/files-au-treasury/treasury/p/prj3db684154d10300c3a1e1/page/c2026_784079_cp.pdf
+  note: Queued agenda source
+- url: https://ministers.treasury.gov.au/ministers/jim-chalmers-2022/media-releases/consultation-discretionary-trusts-reform-implementation
+  note: Queued agenda source
+- url: https://budget.gov.au/
+  note: Queued agenda source
+tags:
+- tax
+- trusts
+- treasury
+- consultation
+- small-business
+notes:
+- Record the exact policy text and source links before submitting to models.
+- Keep hindsight separate from contemporaneous analysis for historical reviews.
