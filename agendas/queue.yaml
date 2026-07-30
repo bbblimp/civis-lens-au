@@ -1,4 +1,49 @@
 items:
+- agenda_id: innovative-business-cgt-concession-consultation-2026
+  status: prepared
+  title: Capital gains tax reforms - Innovative Business CGT Concession for start-up
+    investments
+  evaluation_mode: proposed
+  jurisdiction: federal
+  as_of_date: 2026-07-31
+  summary: 'Treasury consulted on proposed arrangements for an Innovative Business
+    CGT Concession as part of the Australian Government''s broader 2026-27 Budget
+    capital gains tax reforms. The consultation paper proposes a targeted 50 per cent
+    discount on nominal capital gains for eligible early investments in innovative
+    start-ups, including qualifying shares and options held by founders, employee
+    share scheme participants, early stage investors, and some limited partnership
+    fund general partners. Proposed design questions include start-up age and turnover
+    thresholds, possible longer eligibility for biotech, medtech and deep-tech firms,
+    innovation criteria, excluded activities, a five-year minimum holding period,
+    a $10 million lifetime cap, and transitional treatment for existing shares. The
+    consultation opened on 17 June 2026 and closed on 10 July 2026.
+
+    '
+  source_urls:
+  - https://consult.treasury.gov.au/c2026-779186
+  - https://storage.googleapis.com/files-au-treasury/treasury/p/prj3d4fd3ab84d12a0f27df4/page/c2026_779186_cp.pdf
+  - https://budget.gov.au/content/factsheets/download/tax-explainers-negative-gearing-capital-gains-tax.pdf
+  - https://www.aph.gov.au/Parliamentary_Business/Bills_Legislation/bd/bd2526/26bd067
+  - https://ministers.treasury.gov.au/ministers/jim-chalmers-2022/media-releases/government-introduces-first-tranche-tax-reform
+  tags:
+  - tax
+  - capital-gains-tax
+  - startups
+  - innovation
+  - consultation
+  notes:
+  - Focus the review on the proposed Innovative Business CGT Concession and its interaction
+    with the broader CGT reforms, not the full negative gearing package.
+  - Treat the Treasury consultation paper as proposed policy design and distinguish
+    it from enacted Tax Reform No. 1 legislation and Budget explainer material.
+  - Separate innovation incentives, tax neutrality, revenue integrity, complexity,
+    employee share scheme effects, venture-capital effects, start-up eligibility,
+    transitional rules, and distributional claims.
+  policy_id: capital-gains-tax-reforms-innovative-business-cgt-concession-for-start-up-investments
+  policy_dir: policies/proposed/capital-gains-tax-reforms-innovative-business-cgt-concession-for-start-up-investments
+  run_dir: runs/capital-gains-tax-reforms-innovative-business-cgt-concession-for-start-up-investments/capital-gains-tax-reforms-innovative-business-cgt-concession-for-start-up-investments__20260730T170119Z
+  manual_batch_dir: manual_batches/2026-07-30__capital-gains-tax-reforms-innovative-business-cgt-concession-for-start-up-investments
+  prepared_at_utc: '2026-07-30T17:01:19Z'
 - agenda_id: right-to-repair-agricultural-machinery-consultation-2026
   status: prepared
   title: Enhancing Australia's first right to repair laws - agricultural machinery
